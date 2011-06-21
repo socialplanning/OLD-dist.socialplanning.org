@@ -1,4 +1,14 @@
-"""Make sure you fetch the git submodule into ./eggs before you run this"""
+"""
+Before you run this:
+
+  $ git submodule init eggs
+
+After you run this:
+
+  $ cd eggs; git add index.html; git push
+  $ cd ..; git add eggs; git push
+
+"""
 
 import os
 import time
