@@ -1,3 +1,5 @@
+"""Make sure you fetch the git submodule into ./eggs before you run this"""
+
 import os
 import time
 
@@ -24,6 +26,8 @@ fp = open("eggs/index.html", 'w')
 print >> fp, "<html><body><h1>Index of dist.socialplanning.org/eggs</h1><table><tr><th>Filename</th><th>Size</th><th>Last Modified</th></tr>"
 
 for filename in sorted(os.listdir("eggs")):
+    if filename.startswith("."):
+        continue
     print >> fp, """<tr><td><a href="/eggs/%s">%s</a></td>""" % (
         filename, filename)
     stat = os.stat("eggs/" + filename)

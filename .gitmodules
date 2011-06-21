@@ -1,0 +1,3 @@
+[submodule "eggs"]
+	path = eggs
+	url = git://github.com/socialplanning/eggs.git
